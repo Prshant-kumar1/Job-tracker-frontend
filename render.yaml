@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: job-tracker-frontend
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://job-tracker-api-dgs0.onrender.com
