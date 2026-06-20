@@ -5,6 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: "/",
   preview: {
-    allowedHosts: ["job-tracker-frontend-sxro.onrender.com"],
+    allowedHosts: "all",
+    host: "0.0.0.0",
+    port: parseInt(process.env.PORT) || 10000,
   },
 });
