@@ -10,48 +10,54 @@ import ApplicationForm from "./pages/ApplicationForm";
 
 export default function App() {
   return (
-    <div className="app-layout">
-      <Navbar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route
-            path="/dashboard"
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/applications"
-            element={
-              <PrivateRoute>
-                <ApplicationsList />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/applications/new"
-            element={
-              <PrivateRoute>
-                <ApplicationForm />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/applications/:id"
-            element={
-              <PrivateRoute>
-                <ApplicationDetail />
-              </PrivateRoute>
-            }
-          />
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
-        </Routes>
-      </main>
-    </div>
+    <>
+      <div className="bg-blob bg-blob-1" aria-hidden="true"></div>
+      <div className="bg-blob bg-blob-2" aria-hidden="true"></div>
+      <div className="bg-blob bg-blob-3" aria-hidden="true"></div>
+
+      <div className="app-layout">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/applications"
+              element={
+                <PrivateRoute>
+                  <ApplicationsList />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/applications/new"
+              element={
+                <PrivateRoute>
+                  <ApplicationForm />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/applications/:id"
+              element={
+                <PrivateRoute>
+                  <ApplicationDetail />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          </Routes>
+        </main>
+      </div>
+    </>
   );
 }
