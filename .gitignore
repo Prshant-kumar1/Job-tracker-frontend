@@ -1,0 +1,38 @@
+# Root
+*.log
+*.db
+
+# Backend (Smart Job Tracker)
+Smart Job Tracker/__pycache__/
+Smart Job Tracker/*.pyc
+Smart Job Tracker/.env
+Smart Job Tracker/*.db
+Smart Job Tracker/.venv/
+Smart Job Tracker/venv/
+Smart Job Tracker/node_modules/
+Smart Job Tracker/.pytest_cache/
+Smart Job Tracker/htmlcov/
+Smart Job Tracker/.coverage
+Smart Job Tracker/.python-version
+
+# Frontend (job-tracker-frontend)
+job-tracker-frontend/node_modules/
+job-tracker-frontend/dist/
+job-tracker-frontend/.env
+job-tracker-frontend/.env.local
+job-tracker-frontend/.env.*.local
+job-tracker-frontend/*.log
+job-tracker-frontend/npm-debug.log*
+job-tracker-frontend/yarn-debug.log*
+job-tracker-frontend/yarn-error.log*
+job-tracker-frontend/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
